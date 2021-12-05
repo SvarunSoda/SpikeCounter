@@ -71,7 +71,7 @@ int main() {
 	cin >> HighSpikeThreshold;
 	cout << "\n\n";
 
-	cout << "------------------------- " << totalFileNum << " \"" << fileExtension << "\" files found in the current directory. -------------------------\n";
+	cout << "------------------------- " << totalFileNum << " \"" << fileExtension << "\" file(s) found in the current directory. -------------------------\n";
 
 	// READING THE DESIRED FILES AND SEARCHING FOR PARTICLE HITS
 
@@ -99,7 +99,7 @@ int main() {
 
 	}
 
-	cout << "\n------------------------- Total particle hits in " << tracker <<" files: " << TotalParticleHits << ". -------------------------\n";
+	cout << "\n------------------------- Total particle hits in " << tracker <<" file(s): " << TotalParticleHits << ". -------------------------\n";
 
 	// PROGRAM END
 
