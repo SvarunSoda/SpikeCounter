@@ -26,6 +26,7 @@ void BringCursorBack(int offsetX, int offsetY);
 //// GLOBAL VARIABLE INITIALIZATION /////
 
 int FileNum = 0;
+int TotalParticleHits = 0;
 //int LowSpikeThreshold;
 int HighSpikeThreshold;
 
@@ -58,7 +59,6 @@ int main() {
 	vector<string> targetFiles = FindAllTargetFiles(workingDirectory, fileExtension);
 	
 	int totalFileNum = 0;
-	int totalParticleHits = 0;
 	int tracker = 0;
 
 	for (auto i = targetFiles.begin(); i < targetFiles.end(); i++) {
@@ -99,7 +99,7 @@ int main() {
 
 	}
 
-	cout << "\n------------------------- Total particle hits in " << tracker <<" files: " << totalParticleHits << ". -------------------------\n";
+	cout << "\n------------------------- Total particle hits in " << tracker <<" files: " << TotalParticleHits << ". -------------------------\n";
 
 	// PROGRAM END
 
@@ -152,6 +152,7 @@ void ReadParticleFile(ifstream& file, string fileExt) {
 			//particleList.insert(particleList.begin() + particleCount, currentNum);
 
 			particleCount++;
+			TotalParticleHits++;
 
 			if (outputFileInitialized == true) {
 
